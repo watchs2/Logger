@@ -16,17 +16,16 @@ E tem de ser um sistema seguro
 #ifndef LOGGER_H
 #define LOGGER_H
 
-typedef enum{
-    LOG_TYPE_INFO,
-    LOG_TYPE_WARN,
-    LOG_TYPE_ERROR,
-    LOG_TYPE_DEBUG,
-} TypeLog;
+//MACROS DE CORES
 
-//iniciar o logger
+#define GREEN   "\033[32m"
+#define RED     "\033[31m"
+#define YELLOW  "\033[33m"
+#define BLUE    "\033[34m"
+#define CYAN    "\033[36m"
+#define RESET   "\033[0m"
 
-
-//fechar o logger
-
+void log_info(const char* message);
+void log_error(const char* message);
 
 #endif
