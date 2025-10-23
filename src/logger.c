@@ -2,12 +2,14 @@
 #include "../include/logger.h"
 
 
-void log_info(const char* message){
-    printf(GREEN "[INFO] %s" RESET "\n", message);
+void log_init(LogConfig* config){
+   
 }
 
+void log_close(){
 
-void log_error(const char* message){
-    printf(RED "[ERROR] %s" RESET "\n", message);
 }
 
+void log_main(const char* message){
+    printf("[INFO] - %s",message);
+}
