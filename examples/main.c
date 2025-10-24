@@ -2,13 +2,14 @@
 #include <stdio.h>
 
 
-void my_function(int a) {
-    LOG_DEBUG("A calcular para o valor: ");
+void my_function(int a){
+    LOG_WARN("Vamos testar o para o valor:%d",a);
+    LOG_DEBUG("A calcular para o valor:%d",a);
     if (a < 0) {
-        LOG_ERROR("Valor negativo  Erro irrecuperável!");
+        LOG_ERROR("Valor negativo %d Erro irrecuperavel!",a);
+        LOG_INFO("Calculo finalizado valor %d.",a);
         return;
     }
-    
     LOG_INFO("Calculo concluido com sucesso.");
 }
 
@@ -22,10 +23,9 @@ int main(void) {
         .filepath = "app.log"
     };
     log_init(&config);
-    my_function(2);
+    my_function(-2);
 
     log_close();
-
 
     return 0;
 

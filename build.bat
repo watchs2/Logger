@@ -18,7 +18,7 @@ echo A compilar o projeto...
 gcc %SRC% -o %OUT_EXE%
 if %errorlevel% neq 0 (
     echo.
-    echo [ERRO] Falha na compilação!
+    echo [ERRO] Falha na compilation!
     pause
     exit /b %errorlevel%
 )
